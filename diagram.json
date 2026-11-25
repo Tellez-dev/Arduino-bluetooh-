@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Bluetooth LEDs",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -150, "left": 200, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "led2", "top": -150, "left": 260, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": -80, "left": 200, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": -80, "left": 260, "rotate": 90, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    ["uno:8", "r1:1", "green", []],
+    ["r1:2", "led1:A", "green", []],
+    ["led1:C", "uno:GND.1", "black", []],
+    ["uno:9", "r2:1", "red", []],
+    ["r2:2", "led2:A", "red", []],
+    ["led2:C", "uno:GND.1", "black", []]
+  ],
+  "dependencies": {}
+}
