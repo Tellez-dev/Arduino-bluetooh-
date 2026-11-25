@@ -14,11 +14,8 @@ Proyecto de la **Entrega 5** (artículo en formato IEEE): *Enlace serie tipo Blu
 |---|---|
 | `sketch.ino` | Programa de control, con comentarios |
 | `diagram.json` | Descripción del circuito en Wokwi |
-| `wokwi.toml` | Configuración del proyecto (si aplica) |
-| `registro_monitor_serie.txt` | Registro original del monitor serie (79 líneas) |
-| `imagenes/` | Capturas del circuito y del monitor serie |
-
-> Ajusta los nombres de la tabla a los archivos que realmente subiste.
+| `wokwi-project.txt` | https://wokwi.com/projects/481587520199403521 |
+| `registro_monitor_serie.txt` | Registro del monitor serie de una ejecución de prueba (17 registros) |
 
 ## Circuito
 
@@ -49,10 +46,12 @@ tiempo_ms,comando,accion,verde,rojo
 
 Ejemplo: `93002,V,verde_on,1,0`
 
+> El archivo `registro_monitor_serie.txt` corresponde a una ejecución de prueba. Las cifras de la sección de resultados provienen de la ejecución de 79 líneas analizada en el artículo.
+
 ## Cómo reproducirlo
 
-1. Abre el circuito en Wokwi con el enlace de arriba. También puedes crear un proyecto nuevo con la placa Arduino Uno.
-2. Copia `diagram.json` y `sketch.ino` de este repositorio en el proyecto.
+1. Abre el circuito en Wokwi con el enlace de arriba. También puedes crear un proyecto nuevo con la placa Arduino Uno y copiar en él `diagram.json` y `sketch.ino` de este repositorio.
+2. Revisa que el circuito coincida con la tabla de conexiones.
 3. Inicia la simulación.
 4. En el campo de entrada del monitor serie, escribe comandos individuales (por ejemplo `V`) o varios caracteres a la vez (por ejemplo `VRvr`).
 5. Copia el registro del monitor serie para analizarlo.
@@ -71,3 +70,4 @@ Ejemplo: `93002,V,verde_on,1,0`
 - El análisis de tiempos se basa en dos envíos de 16 caracteres (24 intervalos), por lo que los resultados son indicativos.
 
 Como trabajo futuro se propone repetir las pruebas con un módulo HC-05 físico, un divisor de tensión y un teléfono.
+
